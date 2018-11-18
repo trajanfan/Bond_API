@@ -1,0 +1,49 @@
+{"OutputFileName": "MainRunForDay","IsItTheFirstRun": "true","InstrumentList":
+[{"Number": "1",
+"ISIN": "AT0000A1YDF1","CreditSpread": "95",
+"StockBorrowRate": "1.20"
+},
+{"Number": "2","ISIN": "BE0002259282","CreditSpread": "140",
+"StockBorrowRate": "1.00"
+},
+{"Number": "661","ISIN": "ZAE000247458","CreditSpread": "1080","StockBorrowRate": "2.00"
+},
+{"Number": "101",
+"ISIN": "JP375620PFG0",
+"CreditSpread": "60",
+"StockBorrowRate": "0.85",
+"StockPrice": "2578", 
+"StockPriceFormat": "Absolute"
+},
+{"Number": "102",
+"ISIN": "JP388800PDC7",
+"CreditSpread": "110",
+"StockBorrowRate": "1.20",
+"StockVolatility": "20", 
+"StockVolFormat": "Relative"
+},
+{"Number": "103",
+"ISIN": "NO0010607435",
+"CreditSpread": "6500",
+"StockBorrowRate": "5.00",
+"BondPrice": "19.75"
+},
+{"Number": "157a",
+"ISIN": "US177376AD23",
+"CreditSpread": "75",
+"StockBorrowRate": "0.56",
+"TakeOverProbability": "0.01"
+},
+{"Number": "157b",
+"ISIN": "US177376AD23",
+"CreditSpread": "75",
+"StockBorrowRate": "0.56",
+"TakeOverProbability": "0.50"
+},
+{"Number": "157c",
+"ISIN": "US177376AD23",
+"CreditSpread": "75",
+"StockBorrowRate": "0.56",
+"TakeOverProbability": "0.99"
+}]
+}

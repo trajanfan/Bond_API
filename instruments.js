@@ -1,3 +1,5 @@
+const jsonprocess = require('./jsonprocess.js');
+
 var id = 0;
 
 function nextId() {
@@ -14,10 +16,7 @@ function instrument(Number, ISIN, CreditSpread, StockBorrowRate, TakeOverProbabi
     this.TakeOverProbability = TakeOverProbability;
 }
 
-var instruments = [
-    new instrument("157a", "US177376AD23", 75, 0.56, 0.01),
-    new instrument("157b", "US177376AD23", 75, 0.56, 0.50),
-];
+var instruments = jsonprocess.readfile('./input.json');
 
 module.exports = {
     getInstruments: () => {
@@ -34,9 +33,12 @@ module.exports = {
         return null;
     },
 
-    createInstrument: (Number, ISIN, CreditSpread, StockBorrowRate, TakeOverProbability) => {
-        var p = new instrument(Number, ISIN, CreditSpread, StockBorrowRate, TakeOverProbability);
+    createInstrument: (Number, ISIN, CreditSpread, StockBorrowRate, TakeOverProbability,
+        StockPrice, StockPriceFormat, StockVolatility, StockVolFormat, BondPrice) => {
+        var p = new instrument(Number, ISIN, CreditSpread, StockBorrowRate, TakeOverProbability,
+            StockPrice, StockPriceFormat, StockVolatility, StockVolFormat, BondPrice);
         instruments.push(p);
+        jsonprocess.writefile('./input.json', instruments);
         return p;
     },
 };
